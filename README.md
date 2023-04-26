@@ -34,3 +34,22 @@ end_date = pd.Timestamp('2020-3-16',tz ='utc')
 and change the bundle name (`bundle='csv_data'`). 
 
 You should be able to run the test correctly.
+
+
+Python warnings during injection:
+
+Warning 1.
+
+```
+C:\Users\shopp\Anaconda3\envs\Py38\lib\site-packages\zipline\assets\asset_writer.py:823: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for column, dtype in df.dtypes.iteritems():
+```
+To correct it, just go to the file and replace .iteritems with .item.
+
+Warning 2.
+
+```
+C:\Users\shopp\Anaconda3\envs\Py38\lib\site-packages\zipline\assets\asset_writer.py:827: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+```
+
+I don't know how to correct this. If you know how, please let me know.
