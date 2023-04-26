@@ -23,3 +23,5 @@ I.e., the number 4,294,967,295, equivalent to the hexadecimal value FFFF,FFFF16,
 Step 5: In your first zipline backtest notebook, change the symbol (e.g., from "AAPL" to "SHY"), change the dates (`# Set start and end date
 start_date = pd.Timestamp('2018-06-05',tz ='utc')
 end_date = pd.Timestamp('2020-3-16',tz ='utc')`) , and bundle name (`bundle='csv_data'`) 
+
+You should be able to run the test correctly.
