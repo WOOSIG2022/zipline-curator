@@ -9,8 +9,9 @@ Step 3: Put the extension.py file in your local directory "C://users/username/.z
 
 Step 4: In your anaconda terminal, run the code below:
 
-`from zipline.data.bundles import register, csv_data`
-`register('csv_data', csv_data.csv_data, calendar_name = "NYSE")`
+```from zipline.data.bundles import register, csv_data
+
+register('csv_data', csv_data.csv_data, calendar_name = "NYSE")```
 
 You may see error: 
 
