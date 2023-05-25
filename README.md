@@ -9,7 +9,7 @@ Step 3: Put the extension.py file in your local directory "C://users/username/.z
 
 Step 4: In your anaconda terminal, run the code below to inject the data:
 ```
-zipline ingest -b csv_dat
+zipline ingest -b csv_data
 ```
 
 
