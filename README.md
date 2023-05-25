@@ -8,12 +8,10 @@ Step 2: Put the csv_data.py file in your data bundles directory. In my case, it 
 Step 3: Put the extension.py file in your local directory "C://users/username/.zipline".
 
 Step 4: In your anaconda terminal, run the code below to inject the data:
-
 ```
-from zipline.data.bundles import register, csv_data
-
-register('csv_data', csv_data.csv_data, calendar_name = "NYSE")
+zipline ingest -b csv_dat
 ```
+
 
 You may see error: 
 
