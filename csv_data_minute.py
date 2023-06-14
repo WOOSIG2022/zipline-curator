@@ -2,7 +2,7 @@ import pandas as pd
 from os import listdir
 
 # Change the path to where you have your data
-path = "csv_data/"
+path = "data/"
 
 #'C:\\Users\\Andreas Clenow\\BookSamples\\BookModels\\data\\random_stocks\\'
 
