@@ -27,7 +27,7 @@ Traceback (most recent call last):
   File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\assets\asset_writer.py", line 490, in _real_write
     self._write_df_to_table(
   File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\assets\asset_writer.py", line 823, in _write_df_to_table
-    for column, dtype in df.dtypes.item():
+    for column, dtype in df.dtypes.item(): # Zhen's fix: Change item() to items(). 
   File "C:\Users\Andrew\anaconda3\lib\site-packages\pandas\core\base.py", line 349, in item
     raise ValueError("can only convert an array of size 1 to a Python scalar")
 ValueError: can only convert an array of size 1 to a Python scalar
