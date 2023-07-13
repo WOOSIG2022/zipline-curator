@@ -1,0 +1,33 @@
+[2023-07-13 01:57:09.472267] INFO: zipline.data.bundles.core: Ingesting csv_data.
+Loading GLD...
+Loading SHY...
+Loading SLV...
+Loading TLT...
+Traceback (most recent call last):
+  File "C:\Users\Andrew\anaconda3\Scripts\zipline-script.py", line 10, in <module>
+    sys.exit(main())
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\click\core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\click\core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\click\core.py", line 1659, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\click\core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\click\core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\__main__.py", line 389, in ingest
+    bundles_module.ingest(
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\data\bundles\core.py", line 445, in ingest
+    bundle.ingest(
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\data\bundles\csv_data.py", line 69, in csv_data
+    asset_db_writer.write(equities=metadata)
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\assets\asset_writer.py", line 811, in write
+    self._real_write(
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\assets\asset_writer.py", line 490, in _real_write
+    self._write_df_to_table(
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\zipline\assets\asset_writer.py", line 823, in _write_df_to_table
+    for column, dtype in df.dtypes.item():
+  File "C:\Users\Andrew\anaconda3\lib\site-packages\pandas\core\base.py", line 349, in item
+    raise ValueError("can only convert an array of size 1 to a Python scalar")
+ValueError: can only convert an array of size 1 to a Python scalar
