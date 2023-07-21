@@ -1,33 +1,40 @@
 # zipline-curator
 
-## Installing Zipline
+## Installing Zipline-reloaded
 
-conda install -c ml4t -c conda-forge -c ranaroussi zipline-reloaded
+`conda install -c ml4t -c conda-forge -c ranaroussi zipline-reloaded`
 
-zipline ingest -b quandl
+## Ingesting Quandl data
 
-Quandl ingest 
-Value error:
+`zipline ingest -b quandl`
 
-I manually edited in file "..\site-packages\zipline\data\bundles\quandl.py":
-from # api_key = environ.get('QUANDL_API_KEY')
-to  api_key = 'XXXXXXXXX'
-then it's working.
+You may see a messsage starting with `ValueError:`. 
 
-Type error:
-In \trading_calendars\calendar_helpers.py change
-# orig NP_NAT = np.array([pd.NaT], dtype=np.int64)[0]
-# ajjc old issue #40 2022-08-09
-NP_NAT = np.array([pd.NaT.asm8.view('i8')], dtype=np.int64)[0]
+Then you need to manually edit in file "..\site-packages\zipline\data\bundles\quandl.py", from 
 
-Key error: "Turkey"
-pip install iso3166==2.0.2
+> api_key = environ.get('QUANDL_API_KEY')
 
-Type error:
+to  
+
+> api_key = '[your quandl api key]'
+
+It should work.
+
+If you see a message starting with `Type error:`, you need to manually edit in file "..\trading_calendars\calendar_helpers.py", from 
+
+> orig NP_NAT = np.array([pd.NaT], dtype=np.int64)[0]
+
+to
+> NP_NAT = np.array([pd.NaT.asm8.view('i8')], dtype=np.int64)[0].
 
 
 
-Pyfolio
+If you see a message with `Key error: "Turkey"`, you run this in the terminal
+`pip install iso3166==2.0.2`.
 
-pip install pyfolio-reloaded
-conda install -c ml4t pyfolio-reloaded
+
+
+
+## Installing Pyfolio
+
+`pip install pyfolio-reloaded` or `conda install -c ml4t pyfolio-reloaded`
