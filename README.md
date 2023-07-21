@@ -42,7 +42,7 @@ Warning 1.
 C:\Users\shopp\Anaconda3\envs\Py38\lib\site-packages\zipline\assets\asset_writer.py:823: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
   for column, dtype in df.dtypes.iteritems():
 ```
-To correct it, just go to the file and replace .iteritems with .items.
+To correct it, just go to the file and replace .iteritems() with .items().
 
 Warning 2.
 
